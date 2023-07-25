@@ -1,0 +1,49 @@
+## Overview of Analysis:
+ 
+ The purpose of analysis was to create a tool using a neural network model that can determine if the applicants will be funded by the AlphabetSoup nonprofit foundation. In order to determine if the applicants will be selected for funding,the data of past orginizations who have received funding from the nonprofit was gathered to determine the success of the venture. Within the data that was provided, are the following categories/variables:
+
+    * EIN and NAME — Identification columns
+    * APPLICATION_TYPE — Alphabet Soup application type
+    * AFFILIATION — Affiliated sector of industry
+    * CLASSIFICATION — Government organization classification
+    * USE_CASE — Use case for funding
+    * ORGANIZATION — Organization type
+    * STATUS — Active status
+    * INCOME_AMT — Income classification
+    * SPECIAL_CONSIDERATIONS — Special considerations for application
+    * ASK_AMT — Funding amount requested
+    * IS_SUCCESSFUL — Was the money used effectively
+
+ With these datapoints the neural network model will be able to determine and predict if future applicants will have successful ventures and if AlphabetSoup foundation will fund them. 
+
+ ## Results
+
+Data Preprocessing
+
+    * What variable(s) are the target(s) for your model?
+        - The target variable is the IS_SUCCESSFUL as it will determine if the orginizations will recieve funding or not
+
+    * What variable(s) are the features for your model?
+        - The feature variables of the model are APPLICATION_TYPE, CLASSIFICATION, USE_CASE, ORGANIZATION, STATUS, INCOME_AMT, SPECIAL_CONSIDERATIONS, and ASK_AMT
+
+    * What variable(s) should be removed from the input data because they are neither targets nor features?
+        - the  variables that were removed from the data are EIN and NAME. 
+
+Compiling, Training, and Evaluating the Model
+
+    * How many neurons, layers, and activation functions did you select for your neural network model, and why?
+        - The initial network had 3 layers and 80, 30, 1 neurons were used. The activation functions that were used in the model are 'relu', 'elu', and  'sigmoid'. These activation functions were used as they are considered the best practice to use. 
+
+    * Were you able to achieve the target model performance?
+        - The accuracy with the first model was a 73%, which is considered acceptable as it is above 70%
+
+    * What steps did you take in your attempts to increase model performance?
+        - Some attempts that were used to increase the model's performance was to drop another variable, 'STATUS'
+        - Tried to bin the ASK_AMT variable
+        - Added more layers and and activation functions ('tanh')
+
+        While many attempts were made to increase the model's performance, the accuracy of the model did not increase. 
+
+## Summary
+
+With the model's accuracy of 73%, it is considered a good model, however, there could be other models that are created that can produce a higher accuracy compared to the one just created. Some other models that could be used to create a higher accuracy would be Random Forest or Gradient Boosting. 
